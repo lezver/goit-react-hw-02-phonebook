@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import './App.scss';
 import { ContactForm, startContacts } from 'components';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 
-Notiflix.Notify.init({ width: 'fit-content', fontSize: '20px' });
+// Notiflix.Notify.init({ width: 'fit-content', fontSize: '20px' });
 
 export class App extends Component {
   state = {
@@ -18,12 +18,13 @@ export class App extends Component {
     const { contacts } = this.state;
 
     if (contacts.find(({ name }) => name === contact.name)) {
-      return Notiflix.Notify.failure(`${contact.name} is already in contacts.`);
+      return alert(`${contact.name} is already in contacts.`);
+      // return Notiflix.Notify.failure(`${contact.name} is already in contacts.`);
     } else {
       this.setState({
         contacts: [...contacts, contact],
       });
-      Notiflix.Notify.success('You have a new contact!');
+      // Notiflix.Notify.success('You have a new contact!');
     }
   };
 
@@ -46,7 +47,7 @@ export class App extends Component {
 
     console.log(contacts);
 
-    if (contacts.length === 0) Notiflix.Notify.info('No contacts!');
+    // if (contacts.length === 0) Notiflix.Notify.info('No contacts!');
     return (
       <section className="phonebook">
         <h1>Phonebook</h1>
