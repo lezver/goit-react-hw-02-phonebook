@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './App.scss';
-import { startContacts } from 'components';
+import { ContactForm, startContacts } from 'components';
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({ width: 'fit-content', fontSize: '20px' });
@@ -14,18 +14,18 @@ export class App extends Component {
   // handleSearch = ({ currentTarget: { value } }) =>
   //   this.setState({ filter: value });
 
-  // handleAddContact = contact => {
-  //   const { contacts } = this.state;
+  handleAddContact = contact => {
+    const { contacts } = this.state;
 
-  //   if (contacts.find(({ name }) => name === contact.name)) {
-  //     return Notiflix.Notify.failure(`${contact.name} is already in contacts.`);
-  //   } else {
-  //     this.setState({
-  //       contacts: [...contacts, contact],
-  //     });
-  //     Notiflix.Notify.success('You have a new contact!');
-  //   }
-  // };
+    if (contacts.find(({ name }) => name === contact.name)) {
+      return Notiflix.Notify.failure(`${contact.name} is already in contacts.`);
+    } else {
+      this.setState({
+        contacts: [...contacts, contact],
+      });
+      Notiflix.Notify.success('You have a new contact!');
+    }
+  };
 
   // handleFilter = () => {
   //   const { contacts, filter } = this.state;
@@ -50,7 +50,7 @@ export class App extends Component {
     return (
       <section className="phonebook">
         <h1>Phonebook</h1>
-        {/* <ContactForm handleAddContact={this.handleAddContact} /> */}
+        <ContactForm handleAddContact={this.handleAddContact} />
         <h2>Contacts</h2>
         {/* <Filter handleSearch={this.handleSearch} /> */}
 
