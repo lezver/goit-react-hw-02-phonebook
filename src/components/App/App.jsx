@@ -58,16 +58,14 @@ export class App extends Component {
   }
 }
 
-{
-  /* <section className="phonebook">
-  <h1>Phonebook</h1>
-  <ContactForm handleAddContact={this.handleAddContact} />
-  <h2>Contacts</h2>
-  <Filter handleSearch={this.handleSearch} />
-
-  <ContactList
-    contacts={this.handleFilter()}
-    handleDeleteContact={this.handleDeleteContact}
-  />
-</section>; */
-}
+//<section className="phonebook">
+//  <h1>Phonebook</h1>
+//  <ContactForm handleAddContact={this.handleAddContact} />
+//  <h2>Contacts</h2>
+//  <Filter handleSearch={this.handleSearch} />
+//
+//  <ContactList
+//    contacts={this.handleFilter()}
+//    handleDeleteContact={this.handleDeleteContact}
+//  />
+//</section>;
