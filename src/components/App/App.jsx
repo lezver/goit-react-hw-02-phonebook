@@ -6,10 +6,10 @@ import Notiflix from 'notiflix';
 Notiflix.Notify.init({ width: 'fit-content', fontSize: '20px' });
 
 export class App extends Component {
-  // state = {
-  //   contacts: [...startContacts],
-  //   filter: '',
-  // };
+  state = {
+    contacts: [...startContacts],
+    filter: '',
+  };
 
   // handleSearch = ({ currentTarget: { value } }) =>
   //   this.setState({ filter: value });
@@ -48,15 +48,26 @@ export class App extends Component {
     return (
       <section className="phonebook">
         <h1>Phonebook</h1>
-        {/* <ContactForm handleAddContact={this.handleAddContact} /> */}
+        <ContactForm />
         <h2>Contacts</h2>
-        {/* <Filter handleSearch={this.handleSearch} />
+        <Filter />
 
-        <ContactList
-          contacts={this.handleFilter()}
-          handleDeleteContact={this.handleDeleteContact}
-        /> */}
+        <ContactList />
       </section>
     );
   }
+}
+
+{
+  /* <section className="phonebook">
+  <h1>Phonebook</h1>
+  <ContactForm handleAddContact={this.handleAddContact} />
+  <h2>Contacts</h2>
+  <Filter handleSearch={this.handleSearch} />
+
+  <ContactList
+    contacts={this.handleFilter()}
+    handleDeleteContact={this.handleDeleteContact}
+  />
+</section>; */
 }

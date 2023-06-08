@@ -13,3 +13,7 @@
 // Filter.propTypes = {
 //   handleSearch: PropTypes.func.isRequired,
 // };
+
+export const Filter = () => {
+  return <p>Filter</p>;
+};

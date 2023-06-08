@@ -25,3 +25,7 @@
 //   contacts: PropTypes.array.isRequired,
 //   handleDeleteContact: PropTypes.func.isRequired,
 // };
+
+export const ContactList = () => {
+  return <p>ContactList</p>;
+};
