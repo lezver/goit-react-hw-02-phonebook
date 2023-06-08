@@ -44,6 +44,8 @@ export class App extends Component {
   render() {
     const { contacts } = this.state;
 
+    console.log(contacts);
+
     if (contacts.length === 0) Notiflix.Notify.info('No contacts!');
     return (
       <section className="phonebook">

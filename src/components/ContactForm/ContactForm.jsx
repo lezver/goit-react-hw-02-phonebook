@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './ContactForm.scss';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 // import PropTypes from 'prop-types';
 
 export class ContactForm extends Component {
@@ -17,7 +17,7 @@ export class ContactForm extends Component {
     const { handleAddContact } = this.props;
 
     const newContact = {
-      id: nanoid(),
+      id: `id-${Math.random()}`,
       name: name,
       number: number,
     };
